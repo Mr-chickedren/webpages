@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オセロゲーム</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/modal_window.css">
+
+    <script
+		src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous">
+    </script>
+</head>
+
+<body id="outer">
+
+    <div id="outer" class="screen">
+        <h1>オセロゲーム</h1>
+        <h3>ゲームモードの選択</h3>
+    
+        <div class="Button"> 
+            <a 
+                href="./othello_onePlayer.html"
+                class="btn btn-flat">
+                <span>一人でプレイ</span>
+            </a>
+            <br>
+            <br>
+            <a
+                href="./othello_twoPlayers.html" 
+                class="btn btn-flat">
+                <span>二人でプレイ</span>
+            </a>
+        
+        </div>
+
+        <script type="text/JavaScript" src="../src/modal_window.js"></script>
+
+        <div id="modal_color" class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+                <div class="screen">
+                    <p>カラー設定画面</p>
+                    <label><input type="color" id="colorBack">背景色</label>
+                    <label><input type="color" id="colorFore">文字色</label>
+                </div>
+
+                <script type="text/JavaScript" src="../src/colorsetting.js"></script>
+                <br>
+                <a class="js-modal-close" href="">閉じる</a>
+            </div>
+        </div>
+    
+    </div>
+    
+    <header>
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <a class="js-modal-open" data-target="modal_color">カラー設定</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </header>
+</body>
+</html>

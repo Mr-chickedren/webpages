@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オセロ</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/modal_window.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+    </script>
+</head>
+
+<body id="outer">
+
+    <div id="modal_score" class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+            <p>
+                <div id="point_display" style="text-align: center;"></div>
+            </p>
+            <a class="js-modal-close" href="">閉じる</a>
+        </div>
+    </div>
+
+    <script type="text/JavaScript" src="../src/modal_window.js"></script>
+
+    <div id="modal_color" class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+            <div class="screen">
+                <p>カラー設定画面</p>
+                <label><input type="color" id="colorBack">背景色</label>
+                <label><input type="color" id="colorFore">文字色</label>
+            </div>
+            <script type="text/JavaScript" src="../src/colorsetting.js"></script>
+            <br>
+            <a class="js-modal-close" href="">閉じる</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <a class="js-modal-open" data-target="modal_color">カラー設定</a>
+                    </li>
+                    <li>
+                        <a class="js-modal-open" data-target="modal_score">結果</a>
+                    </li>
+                    <li>
+                        <a href="./index.html">ホームに戻る</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="screen">
+        <canvas id="Canvas" width="800" height="800"></canvas>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="../src/othello_twoPlayers.js"></script>
+
+</html>
