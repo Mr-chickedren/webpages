@@ -12,7 +12,7 @@ var time = 0;   //current time
 var clicknum = 0;   //clicks
 var timer; //timer
 
-const N = ;
+const N = 6;
 const NO_SCORE = -10000;
 const INF = 100000;
 
